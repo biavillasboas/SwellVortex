@@ -1,0 +1,59 @@
+$ WAVEWATCH III Grid preprocessor input file
+$ ------------------------------------------
+  '2D Swell Propagation'
+$
+   1.1  0.04118  32  80  0.
+$
+   F T T T T F
+$ geogr. CFL time step is the 2nd one....
+$ UQ does fine with 600s, but PR1 shows instability
+$ 450s is confirmed "OK" with PR1
+$ from calc_CFL.m, T=1/0.0368, Cg=25.447, I get dt=572 s
+  200.  50.0  8. 5.
+$
+&PRO3 WDTHTH=2, WDTHCG=2 /
+&OUTS E3D = 1/
+END OF NAMELISTS
+$
+  'RECT' F 'NONE'
+  301  401
+  5000  5000  1.0
+  0  0  1 
+  -5  2.25  10  -25. 2  1 '(....)' 'UNIT' 'input'  
+$
+120701*1
+$
+10 1 1 '(....)' 'PART' 'input'
+$
+      1   1   F
+$
+      1   401  T
+$
+      301   1   F
+$
+      301   401  T
+$
+      0   0  F
+      0   0  F
+      0   0  F
+
+$ Output boundary points --------------------------------------------- $
+$ Output boundary points are defined as a number of straight lines,
+$ defined by its starting point (X0,Y0), increments (DX,DY) and number
+$ of points. A negative number of points starts a new output file.
+$ Note that this data is only generated if requested by the actual
+$ program. Example again for spherical grid in degrees. Note, these do
+$ not need to be defined for data transfer between grids in the multi
+$ grid driver.
+$
+$     1.75  1.50  0.25 -0.10     3
+$     2.25  1.50 -0.10  0.00    -6
+$     0.10  0.10  0.10  0.00   -10
+$
+$  Close list by defining line with 0 points (mandatory)
+$
+     0.    0.    0.    0.       0
+$
+$ -------------------------------------------------------------------- $
+$ End of input file                                                    $
+$ -------------------------------------------------------------------- $
