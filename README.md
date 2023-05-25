@@ -38,7 +38,7 @@ All data used in this work was obtained from numerical simulations. The configur
   - [gauss_vmax40cms](https://github.com/biavillasboas/SwellVortex/tree/main/ww3_experiments/s10/gauss_vmax40cms): Experiment for the Gaussian vortex with maximum speed $U_m = 0.4$ m/s
   - - gauss_vmax80cms: Experiment for the Gaussian vortex with maximum speed $U_m = 0.8$ m/s   
 - s40: Experiments forced with directional spreading set by the parameter $s = 40$
-  - control: Run with no current forcing
+  - control: Experiment with no current forcing
   - gauss_vmax40cms: Experiment for the Gaussian vortex with maximum speed $U_m = 0.4$ m/s
   - - gauss_vmax80cms: Experiment for the Gaussian vortex with maximum speed $U_m = 0.8$ m/s
 
